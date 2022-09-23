@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -464,13 +464,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_48
+      name: Jump0
       rect:
         serializedVersion: 2
         x: 1
         y: 48
         width: 7
-        height: 7
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -485,13 +485,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_49
+      name: Jump1
       rect:
         serializedVersion: 2
         x: 8
-        y: 49
+        y: 48
         width: 8
-        height: 7
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,13 +506,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_50
+      name: jump2
       rect:
         serializedVersion: 2
         x: 16
-        y: 50
+        y: 48
         width: 8
-        height: 6
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,13 +527,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_51
+      name: jump3
       rect:
         serializedVersion: 2
         x: 24
-        y: 49
+        y: 48
         width: 8
-        height: 7
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,7 +602,6 @@ TextureImporter:
     nameFileIdTable:
       Player_17: -56946154
       Player_33: -272795723
-      Player_48: -751427290
       Player_57: -630228798
       Player_18: -239562098
       Run0: 1445392977
@@ -610,7 +609,6 @@ TextureImporter:
       Player_12: 1241639757
       Run1: -1982418068
       Player_29: -1070350279
-      Player_51: -566476563
       Player_56: -407382384
       Idle0: 794323595
       Run2: 191364645
@@ -622,21 +620,23 @@ TextureImporter:
       Run6: 497211221
       Player_40: 1728044073
       Player_8: -1719908274
+      Jump1: -247121224
       Player_10: -389147840
       Player_27: 546755919
-      Player_15: -1829104485
-      Player_13: -1252004768
-      Player_21: 1363660071
+      Jump0: -751427290
       Player_32: -1743048668
-      Player_42: -1930523528
-      Player_24: 888562695
-      Idle2: 483519992
+      Player_15: -1829104485
+      Player_21: 1363660071
       Player_43: -107690485
+      Player_13: -1252004768
+      Idle2: 483519992
+      Player_24: 888562695
+      Player_42: -1930523528
+      Run4: 1502835329
       Player_35: 1927676757
       Player_11: 923708855
       Player_19: 1297348644
       Player_20: 627287211
-      Run4: 1502835329
       Player_30: -1110930307
       Run7: 1141335037
       Player_46: 844401340
@@ -648,7 +648,6 @@ TextureImporter:
       Player_47: 505390754
       Player_53: -1480642906
       Player_31: 436540708
-      Player_50: 1125402489
       Run5: 1887329673
       Run3: 646870084
       Idle3: 1322184817
@@ -657,9 +656,10 @@ TextureImporter:
       Player_26: 1447967485
       Player_28: 1651190163
       Idle1: -1574738981
+      jump2: 1125402489
+      jump3: -566476563
       Player_52: -1373568742
       Player_45: -1070870465
-      Player_49: -247121224
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
