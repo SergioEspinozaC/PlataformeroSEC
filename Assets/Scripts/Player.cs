@@ -78,8 +78,6 @@ public class Player : MonoBehaviour
                 animator.SetBool("isJumping", false);
             }
 
-            DeathOnFall();
-
             if (Input.GetKeyDown(KeyCode.E) && Time.time > lastShoot + 1f)
             {
                 Shoot();
@@ -90,6 +88,8 @@ public class Player : MonoBehaviour
             {
                 transform.position = destinyWarp.transform.position;
             }
+
+            DeathOnFall();
         }
     }
         public void Death()
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             respawnPoint = initialPosition;
             if (life <= 0)
             {
-                life = 3;
+                life = 2;
                 for (int i = 0; i < lifesPanel.transform.childCount; i++)
                 {
                     lifesPanel.transform.GetChild(i).gameObject.SetActive(true);
@@ -106,33 +106,31 @@ public class Player : MonoBehaviour
             }
         }
 
-        public void Hit(float knockback, GameObject enemy)
-        {
+    public void Hit(float knockback, GameObject enemy)
+    {
         if (!isInCoolDown)
         {
             StartCoroutine(cooldown());
-            if (life >= 0)
+            if (life > 0)
             {
                 lifesPanel.transform.GetChild(life).gameObject.SetActive(false);
                 life -= 1;
                 if (enemy)
                 {
-                    Vector2 difference = (transform.position = enemy.transform.position);
-                    
+                    Vector2 difference = (transform.position - enemy.transform.position);
                     float knockbackDirection = difference.x >= 0 ? 1 : -1;
-                    rigidBody2D.velocity = new Vector2(knockbackDirection * knockback, knockback / 2);
-                }
+                    rigidBody2D.velocity = new Vector2(knockbackDirection * knockback, knockback);
 
+                }
             }
             else
             {
                 Death();
             }
         }
-           
-        }
+    }
 
-        IEnumerator cooldown()
+    IEnumerator cooldown()
         {
             isInCoolDown = true;
             yield return new WaitForSeconds(cooldownTime);
@@ -196,7 +194,6 @@ public class Player : MonoBehaviour
                 destinyWarp = null;
             }
         }
-
         
 
         private void Shoot()
